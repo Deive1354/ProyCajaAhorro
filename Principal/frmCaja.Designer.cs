@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class Cuentas
+    partial class frmCaja
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmCaja
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Cuentas";
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "frmCaja";
+            this.Text = "Caja";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

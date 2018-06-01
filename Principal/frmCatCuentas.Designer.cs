@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class CatCuentas
+    partial class frmCatCuentas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatCuentas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatCuentas));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.OpSalir = new System.Windows.Forms.ToolStripButton();
             this.OpAgregar = new System.Windows.Forms.ToolStripButton();

@@ -24,7 +24,7 @@ namespace Principal
 
         private void OpSocios_Click(object sender, EventArgs e)
         {
-            var frm_Socios = new Socios(ref this.OpSocios) { MdiParent = this , WindowState= FormWindowState.Maximized};
+            var frm_Socios = new frmSocios(ref this.OpSocios) { MdiParent = this , WindowState= FormWindowState.Maximized};
  
             frm_Socios.Show();
 
@@ -44,7 +44,7 @@ namespace Principal
 
         private void OpCatInversiones_Click(object sender, EventArgs e)
         {
-            var fromCatCuentas = new CatCuentas(ref OpCatInversiones) { MdiParent = this, WindowState = FormWindowState.Maximized };
+            var fromCatCuentas = new frmCatCuentas(ref OpCatInversiones) { MdiParent = this, WindowState = FormWindowState.Maximized };
 
 
             //  fromCatCuentas.MdiParent = this;

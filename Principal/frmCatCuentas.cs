@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class CatCuentas : Form
+    public partial class frmCatCuentas : Form
     {
         ToolStripButton _BotonLocal;
 
 
-        public CatCuentas(ref ToolStripButton BotonMDI)
+        public frmCatCuentas(ref ToolStripButton BotonMDI)
         {
             InitializeComponent();
             _BotonLocal = BotonMDI;

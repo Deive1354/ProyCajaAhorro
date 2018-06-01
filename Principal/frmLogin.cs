@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class Caja : Form
+    public partial class frmLogin : Form
     {
-        public Caja()
+        public frmLogin()
         {
             InitializeComponent();
         }

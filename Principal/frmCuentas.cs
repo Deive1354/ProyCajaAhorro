@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class Cuentas : Form
+    public partial class frmCuentas : Form
     {
-        public Cuentas()
+        public frmCuentas()
         {
             InitializeComponent();
         }
