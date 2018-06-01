@@ -26,7 +26,6 @@ namespace Principal
         {
             var frm_Socios = new Socios(ref this.OpSocios) { MdiParent = this , WindowState= FormWindowState.Maximized};
  
-
             frm_Socios.Show();
 
         }
@@ -42,5 +41,18 @@ namespace Principal
         {
 
         }
+
+        private void OpCatInversiones_Click(object sender, EventArgs e)
+        {
+            var fromCatCuentas = new CatCuentas(ref OpCatInversiones) { MdiParent = this, WindowState = FormWindowState.Maximized };
+
+
+            //  fromCatCuentas.MdiParent = this;
+
+
+            fromCatCuentas.Show();
+
+        }
+        
     }
 }

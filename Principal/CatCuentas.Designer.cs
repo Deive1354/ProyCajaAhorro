@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class Socios
+    partial class CatCuentas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Socios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatCuentas));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.OpSalir = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.OpAgregar = new System.Windows.Forms.ToolStripButton();
             this.OpModificar = new System.Windows.Forms.ToolStripButton();
             this.OpEliminar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.OpCancelar = new System.Windows.Forms.ToolStripButton();
             this.OpGuardar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +54,8 @@
             this.OpGuardar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(543, 25);
-            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Size = new System.Drawing.Size(595, 25);
+            this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // OpSalir
@@ -67,11 +67,6 @@
             this.OpSalir.Text = "Salir";
             this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
             // OpAgregar
             // 
             this.OpAgregar.Image = ((System.Drawing.Image)(resources.GetObject("OpAgregar.Image")));
@@ -79,7 +74,6 @@
             this.OpAgregar.Name = "OpAgregar";
             this.OpAgregar.Size = new System.Drawing.Size(69, 22);
             this.OpAgregar.Text = "Agregar";
-            this.OpAgregar.Click += new System.EventHandler(this.OpAgregar_Click);
             // 
             // OpModificar
             // 
@@ -96,11 +90,6 @@
             this.OpEliminar.Name = "OpEliminar";
             this.OpEliminar.Size = new System.Drawing.Size(70, 22);
             this.OpEliminar.Text = "Eliminar";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // OpCancelar
             // 
@@ -120,16 +109,26 @@
             this.OpGuardar.Size = new System.Drawing.Size(69, 22);
             this.OpGuardar.Text = "Guardar";
             // 
-            // Socios
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // CatCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 440);
+            this.ClientSize = new System.Drawing.Size(595, 495);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Socios";
-            this.Text = "Socios";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Socios_FormClosing);
-            this.Load += new System.EventHandler(this.Socios_Load);
+            this.Name = "CatCuentas";
+            this.Text = "CatCuentas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CatCuentas_FormClosing);
+            this.Load += new System.EventHandler(this.CatCuentas_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -148,6 +147,5 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton OpCancelar;
         private System.Windows.Forms.ToolStripButton OpGuardar;
-
     }
 }

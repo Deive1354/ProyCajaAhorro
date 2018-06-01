@@ -115,6 +115,7 @@
             this.OpCatInversiones.Name = "OpCatInversiones";
             this.OpCatInversiones.Size = new System.Drawing.Size(110, 22);
             this.OpCatInversiones.Text = "Cat. Inversiones";
+            this.OpCatInversiones.Click += new System.EventHandler(this.OpCatInversiones_Click);
             // 
             // toolStripButton4
             // 
