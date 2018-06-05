@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class frmCatCuentas : Form
+    public partial class CatCuentas : Form
     {
         ToolStripButton _BotonLocal;
 
 
-        public frmCatCuentas(ref ToolStripButton BotonMDI)
+        public CatCuentas(ref ToolStripButton BotonMDI)
         {
             InitializeComponent();
             _BotonLocal = BotonMDI;
@@ -33,11 +33,6 @@ namespace Principal
         }
 
         private void OpSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void OpSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

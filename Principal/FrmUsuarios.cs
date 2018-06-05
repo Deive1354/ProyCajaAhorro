@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class frmCaja : Form
-    { 
-          ToolStripButton _BotonLocal;
-         public frmCaja(ref ToolStripButton BotonMDI)
+    public partial class FrmUsuarios : Form
+    {
+         ToolStripButton _BotonLocal;
+         public FrmUsuarios(ref ToolStripButton BotonMDI)
         {
             InitializeComponent();
 
@@ -21,12 +21,12 @@ namespace Principal
 
         }
 
-        private void OpSalir_Click(object sender, EventArgs e)
+        private void FrmUsuarios_Load(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
-        private void OpSalir_Click_1(object sender, EventArgs e)
+        private void OpSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }

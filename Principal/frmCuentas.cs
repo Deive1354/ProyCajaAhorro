@@ -12,9 +12,29 @@ namespace Principal
 {
     public partial class frmCuentas : Form
     {
-        public frmCuentas()
+         ToolStripButton _BotonLocal;
+         
+        public frmCuentas(ref ToolStripButton BotonMDI)
         {
             InitializeComponent();
+
+            _BotonLocal = BotonMDI;
+
+        }
+
+        private void frmCuentas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void OpSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

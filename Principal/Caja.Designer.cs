@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class frmCuentas
+    partial class Caja
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuentas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Caja));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.OpSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -54,8 +54,8 @@
             this.OpGuardar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(748, 25);
-            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Size = new System.Drawing.Size(513, 25);
+            this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // OpSalir
@@ -65,7 +65,7 @@
             this.OpSalir.Name = "OpSalir";
             this.OpSalir.Size = new System.Drawing.Size(49, 22);
             this.OpSalir.Text = "Salir";
-            this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click_1);
+            this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -119,15 +119,15 @@
             this.OpGuardar.Size = new System.Drawing.Size(69, 22);
             this.OpGuardar.Text = "Guardar";
             // 
-            // frmCuentas
+            // Caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 261);
+            this.ClientSize = new System.Drawing.Size(513, 285);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "frmCuentas";
-            this.Text = "Cuentas";
-            this.Load += new System.EventHandler(this.frmCuentas_Load);
+            this.Name = "Caja";
+            this.Text = "Caja";
+            this.Load += new System.EventHandler(this.Caja_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -146,6 +146,5 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton OpCancelar;
         private System.Windows.Forms.ToolStripButton OpGuardar;
-
     }
 }

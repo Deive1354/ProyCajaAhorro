@@ -53,6 +53,24 @@ namespace Principal
             fromCatCuentas.Show();
 
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            var Caja = new frmCaja(ref toolStripButton5) { MdiParent = this, WindowState = FormWindowState.Maximized };
+             Caja.Show();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            var Usuarios = new FrmUsuarios(ref toolStripButton6) { MdiParent = this, WindowState = FormWindowState.Maximized };
+            Usuarios.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            var Cuentas = new frmCuentas(ref toolStripButton4) { MdiParent = this, WindowState = FormWindowState.Maximized };
+            Cuentas.Show();
+        }
         
     }
 }

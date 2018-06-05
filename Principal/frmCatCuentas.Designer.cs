@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatCuentas));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.OpSalir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.OpAgregar = new System.Windows.Forms.ToolStripButton();
             this.OpModificar = new System.Windows.Forms.ToolStripButton();
             this.OpEliminar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.OpCancelar = new System.Windows.Forms.ToolStripButton();
             this.OpGuardar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(595, 25);
-            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // OpSalir
@@ -65,7 +65,12 @@
             this.OpSalir.Name = "OpSalir";
             this.OpSalir.Size = new System.Drawing.Size(49, 22);
             this.OpSalir.Text = "Salir";
-            this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click);
+            this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click_1);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // OpAgregar
             // 
@@ -91,6 +96,11 @@
             this.OpEliminar.Size = new System.Drawing.Size(70, 22);
             this.OpEliminar.Text = "Eliminar";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // OpCancelar
             // 
             this.OpCancelar.Enabled = false;
@@ -109,23 +119,13 @@
             this.OpGuardar.Size = new System.Drawing.Size(69, 22);
             this.OpGuardar.Text = "Guardar";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // CatCuentas
+            // frmCatCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 495);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "CatCuentas";
+            this.Name = "frmCatCuentas";
             this.Text = "CatCuentas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CatCuentas_FormClosing);
             this.Load += new System.EventHandler(this.CatCuentas_Load);
@@ -147,5 +147,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton OpCancelar;
         private System.Windows.Forms.ToolStripButton OpGuardar;
+
     }
 }
