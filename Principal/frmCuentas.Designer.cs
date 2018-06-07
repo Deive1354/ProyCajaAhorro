@@ -95,6 +95,7 @@
             this.OpEliminar.Name = "OpEliminar";
             this.OpEliminar.Size = new System.Drawing.Size(70, 22);
             this.OpEliminar.Text = "Eliminar";
+            this.OpEliminar.Click += new System.EventHandler(this.OpEliminar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -123,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 261);
+            this.ClientSize = new System.Drawing.Size(748, 439);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmCuentas";
             this.Text = "Cuentas";

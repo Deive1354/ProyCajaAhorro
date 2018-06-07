@@ -36,5 +36,10 @@ namespace Principal
         {
             this.Close();
         }
+
+        private void OpEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
