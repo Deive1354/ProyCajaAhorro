@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class frmCaja
+    partial class Socios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCaja));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Socios));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.OpSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -54,8 +54,8 @@
             this.OpGuardar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(568, 25);
-            this.toolStrip1.TabIndex = 5;
+            this.toolStrip1.Size = new System.Drawing.Size(543, 25);
+            this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // OpSalir
@@ -65,7 +65,7 @@
             this.OpSalir.Name = "OpSalir";
             this.OpSalir.Size = new System.Drawing.Size(49, 22);
             this.OpSalir.Text = "Salir";
-            this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click_1);
+            this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -79,6 +79,7 @@
             this.OpAgregar.Name = "OpAgregar";
             this.OpAgregar.Size = new System.Drawing.Size(69, 22);
             this.OpAgregar.Text = "Agregar";
+            this.OpAgregar.Click += new System.EventHandler(this.OpAgregar_Click);
             // 
             // OpModificar
             // 
@@ -119,14 +120,16 @@
             this.OpGuardar.Size = new System.Drawing.Size(69, 22);
             this.OpGuardar.Text = "Guardar";
             // 
-            // frmCaja
+            // Socios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 262);
+            this.ClientSize = new System.Drawing.Size(543, 440);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "frmCaja";
-            this.Text = "Caja";
+            this.Name = "Socios";
+            this.Text = "Socios";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Socios_FormClosing);
+            this.Load += new System.EventHandler(this.Socios_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
