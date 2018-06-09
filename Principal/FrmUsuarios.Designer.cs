@@ -149,6 +149,7 @@
             this.OpSalir.Name = "OpSalir";
             this.OpSalir.Size = new System.Drawing.Size(49, 22);
             this.OpSalir.Text = "Salir";
+            this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click_1);
             // 
             // toolStripSeparator1
             // 
