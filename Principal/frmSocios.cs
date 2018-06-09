@@ -115,6 +115,7 @@ namespace Principal
                 var _db = new dbCAJA();
                 var reg =new SOCIOS();
 
+                reg.IdSocio = Guid.NewGuid();
                 reg.Socio = this.txtSocio.Text;
                 reg.RFC = this.rfc.Text;
                 reg.Domicilio = this.domicilio.Text;
