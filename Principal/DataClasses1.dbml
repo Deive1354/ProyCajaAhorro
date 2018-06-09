@@ -14,18 +14,6 @@
       <Association Name="Usuarios_Caja" Member="Usuarios" ThisKey="NoUsuario" OtherKey="NoUsuario" Type="Usuarios" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="Soft1.CatCuentas" Member="CatCuentas">
-    <Type Name="CatCuentas">
-      <Column Name="IdCta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TipoCuenta" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
-      <Column Name="MontoMinimo" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="TasaInteres" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="PlazoForsozo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-      <Column Name="NoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Association Name="CatCuentas_Cuentas" Member="Cuentas" ThisKey="IdCta" OtherKey="Idcta" Type="Cuentas" />
-    </Type>
-  </Table>
   <Table Name="Soft1.Cuentas" Member="Cuentas">
     <Type Name="Cuentas">
       <Column Name="NoCuenta" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -38,9 +26,9 @@
       <Column Name="FechaApertura" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="NoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Cuentas_Caja" Member="Caja" ThisKey="NoCuenta" OtherKey="NoCuenta" Type="Caja" />
-      <Association Name="CatCuentas_Cuentas" Member="CatCuentas" ThisKey="Idcta" OtherKey="IdCta" Type="CatCuentas" IsForeignKey="true" />
       <Association Name="SOCIOS_Cuentas" Member="SOCIOS" ThisKey="Idsocio" OtherKey="IdSocio" Type="SOCIOS" IsForeignKey="true" />
       <Association Name="Usuarios_Cuentas" Member="Usuarios" ThisKey="NoUsuario" OtherKey="NoUsuario" Type="Usuarios" IsForeignKey="true" />
+      <Association Name="CatCuentas_Cuentas" Member="CatCuentas" ThisKey="Idcta" OtherKey="IdCta" Type="CatCuentas" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="Soft1.SOCIOS" Member="SOCIOS">
@@ -59,7 +47,7 @@
     <Type Name="Usuarios">
       <Column Name="NoUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Usuario" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
-      <Column Name="Contraseña" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
       <Column Name="Activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="Usuarios_Caja" Member="Caja" ThisKey="NoUsuario" OtherKey="NoUsuario" Type="Caja" />
       <Association Name="Usuarios_Cuentas" Member="Cuentas" ThisKey="NoUsuario" OtherKey="NoUsuario" Type="Cuentas" />
@@ -75,6 +63,18 @@
       <Column Name="IdSocio" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Column Name="NoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Usuario" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Soft1.CatCuentas" Member="CatCuentas">
+    <Type Name="CatCuentas">
+      <Column Name="IdCta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TipoCuenta" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="MontoMinimo" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TasaInteres" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="PlazoForsozo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CatCuentas_Cuentas" Member="Cuentas" ThisKey="IdCta" OtherKey="Idcta" Type="Cuentas" />
     </Type>
   </Table>
   <Function Name="dbo.spCuentas_Apertura" Method="spCuentas_Apertura">

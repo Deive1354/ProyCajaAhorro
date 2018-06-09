@@ -12,6 +12,8 @@ namespace Principal
 {
     public partial class MDI : Form
     {
+        public int NoUsuario = 0;
+
         public MDI()
         {
             InitializeComponent();
@@ -24,10 +26,8 @@ namespace Principal
 
         private void OpSocios_Click(object sender, EventArgs e)
         {
-            var frm_Socios = new frmSocios(ref this.OpSocios) { MdiParent = this , WindowState= FormWindowState.Maximized};
- 
+            var frm_Socios = new frmSocios(ref this.OpSocios) { MdiParent = this , WindowState= FormWindowState.Maximized}; 
             frm_Socios.Show();
-
         }
 
 
@@ -39,12 +39,23 @@ namespace Principal
 
         private void MDI_Load(object sender, EventArgs e)
         {
+            //var frm_acceso = new frmLogin() {  StartPosition = FormStartPosition.CenterScreen };            
+            //frm_acceso.ShowDialog();
+            //this.NoUsuario = frm_acceso.NoUsuario_Log;
+            
+            
+            //TEMP
+            this.NoUsuario = 1;
+            toolStrip1.Enabled = true;
+
+
+             
 
         }
 
         private void OpCatInversiones_Click(object sender, EventArgs e)
         {
-            var fromCatCuentas = new frmCatCuentas(ref OpCatInversiones) { MdiParent = this, WindowState = FormWindowState.Maximized };
+            var fromCatCuentas = new frmCatCuentas(ref OpCatInversiones,this.NoUsuario) { MdiParent = this, WindowState = FormWindowState.Maximized };
 
 
             //  fromCatCuentas.MdiParent = this;

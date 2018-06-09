@@ -30,5 +30,10 @@ namespace Principal
         {
             this.Close();
         }
+
+        private void frmCaja_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

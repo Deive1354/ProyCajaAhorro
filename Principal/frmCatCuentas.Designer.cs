@@ -43,12 +43,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtTipoCuenta = new System.Windows.Forms.TextBox();
             this.txtMontoMinimo = new System.Windows.Forms.TextBox();
             this.txtTasaInteres = new System.Windows.Forms.TextBox();
             this.txtPlazoForsozo = new System.Windows.Forms.TextBox();
-            this.txtNoUsuario = new System.Windows.Forms.TextBox();
             this.checkActivo = new System.Windows.Forms.CheckBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
@@ -68,7 +66,7 @@
             this.OpGuardar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(639, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(987, 25);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -140,105 +138,99 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 40);
+            this.label1.Location = new System.Drawing.Point(24, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "TipoCuenta";
+            this.label1.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 71);
+            this.label2.Location = new System.Drawing.Point(24, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "MontoMinimo";
+            this.label2.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 101);
+            this.label3.Location = new System.Drawing.Point(24, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "TasaInteres";
+            this.label3.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 135);
+            this.label4.Location = new System.Drawing.Point(24, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "PlazoForsozo";
+            this.label4.Visible = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(317, 71);
+            this.label5.Location = new System.Drawing.Point(261, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Activo";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(317, 40);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "NoUsuario";
+            this.label5.Visible = false;
             // 
             // txtTipoCuenta
             // 
-            this.txtTipoCuenta.Location = new System.Drawing.Point(116, 33);
+            this.txtTipoCuenta.Location = new System.Drawing.Point(127, 43);
             this.txtTipoCuenta.Name = "txtTipoCuenta";
             this.txtTipoCuenta.Size = new System.Drawing.Size(195, 20);
             this.txtTipoCuenta.TabIndex = 12;
+            this.txtTipoCuenta.Visible = false;
             // 
             // txtMontoMinimo
             // 
-            this.txtMontoMinimo.Location = new System.Drawing.Point(116, 64);
+            this.txtMontoMinimo.Location = new System.Drawing.Point(127, 74);
             this.txtMontoMinimo.Name = "txtMontoMinimo";
             this.txtMontoMinimo.Size = new System.Drawing.Size(195, 20);
             this.txtMontoMinimo.TabIndex = 13;
+            this.txtMontoMinimo.Visible = false;
             // 
             // txtTasaInteres
             // 
-            this.txtTasaInteres.Location = new System.Drawing.Point(116, 94);
+            this.txtTasaInteres.Location = new System.Drawing.Point(127, 104);
             this.txtTasaInteres.Name = "txtTasaInteres";
             this.txtTasaInteres.Size = new System.Drawing.Size(117, 20);
             this.txtTasaInteres.TabIndex = 14;
+            this.txtTasaInteres.Visible = false;
             // 
             // txtPlazoForsozo
             // 
-            this.txtPlazoForsozo.Location = new System.Drawing.Point(116, 128);
+            this.txtPlazoForsozo.Location = new System.Drawing.Point(127, 138);
             this.txtPlazoForsozo.Name = "txtPlazoForsozo";
             this.txtPlazoForsozo.Size = new System.Drawing.Size(117, 20);
             this.txtPlazoForsozo.TabIndex = 15;
-            // 
-            // txtNoUsuario
-            // 
-            this.txtNoUsuario.Location = new System.Drawing.Point(385, 40);
-            this.txtNoUsuario.Name = "txtNoUsuario";
-            this.txtNoUsuario.Size = new System.Drawing.Size(118, 20);
-            this.txtNoUsuario.TabIndex = 16;
+            this.txtPlazoForsozo.Visible = false;
             // 
             // checkActivo
             // 
             this.checkActivo.AutoSize = true;
-            this.checkActivo.Location = new System.Drawing.Point(385, 71);
+            this.checkActivo.Location = new System.Drawing.Point(264, 127);
             this.checkActivo.Name = "checkActivo";
             this.checkActivo.Size = new System.Drawing.Size(15, 14);
             this.checkActivo.TabIndex = 17;
             this.checkActivo.UseVisualStyleBackColor = true;
+            this.checkActivo.Visible = false;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 183);
+            this.dataGridView2.Location = new System.Drawing.Point(16, 204);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(611, 290);
             this.dataGridView2.TabIndex = 18;
@@ -247,21 +239,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 495);
+            this.ClientSize = new System.Drawing.Size(987, 664);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.checkActivo);
-            this.Controls.Add(this.txtNoUsuario);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtTipoCuenta);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtMontoMinimo);
             this.Controls.Add(this.txtPlazoForsozo);
             this.Controls.Add(this.txtTasaInteres);
-            this.Controls.Add(this.txtMontoMinimo);
-            this.Controls.Add(this.txtTipoCuenta);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.toolStrip1);
             this.Name = "frmCatCuentas";
             this.Text = "CatCuentas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CatCuentas_FormClosing);
@@ -290,12 +280,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTipoCuenta;
         private System.Windows.Forms.TextBox txtMontoMinimo;
         private System.Windows.Forms.TextBox txtTasaInteres;
         private System.Windows.Forms.TextBox txtPlazoForsozo;
-        private System.Windows.Forms.TextBox txtNoUsuario;
         private System.Windows.Forms.CheckBox checkActivo;
         private System.Windows.Forms.DataGridView dataGridView2;
 

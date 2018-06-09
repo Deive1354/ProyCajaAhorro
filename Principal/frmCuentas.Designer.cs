@@ -85,7 +85,6 @@
             this.OpSalir.Name = "OpSalir";
             this.OpSalir.Size = new System.Drawing.Size(49, 22);
             this.OpSalir.Text = "Salir";
-            this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -110,7 +109,7 @@
             // 
             // OpEliminar
             // 
-           this.OpEliminar.Image = ((System.Drawing.Image)(resources.GetObject("OpEliminar.Image")));
+            this.OpEliminar.Image = ((System.Drawing.Image)(resources.GetObject("OpEliminar.Image")));
             this.OpEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.OpEliminar.Name = "OpEliminar";
             this.OpEliminar.Size = new System.Drawing.Size(70, 22);
@@ -130,6 +129,7 @@
             this.OpCancelar.Name = "OpCancelar";
             this.OpCancelar.Size = new System.Drawing.Size(73, 22);
             this.OpCancelar.Text = "Cancelar";
+            this.OpCancelar.Click += new System.EventHandler(this.OpCancelar_Click_1);
             // 
             // OpGuardar
             // 
@@ -139,6 +139,7 @@
             this.OpGuardar.Name = "OpGuardar";
             this.OpGuardar.Size = new System.Drawing.Size(69, 22);
             this.OpGuardar.Text = "Guardar";
+            this.OpGuardar.Click += new System.EventHandler(this.OpGuardar_Click_1);
             // 
             // NoCuenta
             // 

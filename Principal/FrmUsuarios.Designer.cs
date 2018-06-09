@@ -47,6 +47,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.OpCancelar = new System.Windows.Forms.ToolStripButton();
             this.OpGuardar = new System.Windows.Forms.ToolStripButton();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,8 +70,9 @@
             // txtcontraseña
             // 
             this.txtcontraseña.Location = new System.Drawing.Point(103, 77);
+            this.txtcontraseña.MaxLength = 32;
             this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.Size = new System.Drawing.Size(100, 20);
+            this.txtcontraseña.Size = new System.Drawing.Size(197, 20);
             this.txtcontraseña.TabIndex = 20;
             // 
             // txtusuarios
@@ -149,6 +151,7 @@
             this.OpSalir.Name = "OpSalir";
             this.OpSalir.Size = new System.Drawing.Size(49, 22);
             this.OpSalir.Text = "Salir";
+            this.OpSalir.Click += new System.EventHandler(this.OpSalir_Click_1);
             // 
             // toolStripSeparator1
             // 
@@ -201,12 +204,24 @@
             this.OpGuardar.Name = "OpGuardar";
             this.OpGuardar.Size = new System.Drawing.Size(69, 22);
             this.OpGuardar.Text = "Guardar";
+            this.OpGuardar.Click += new System.EventHandler(this.OpGuardar_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(288, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 26);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(579, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtnodeusuario);
             this.Controls.Add(this.txtcontraseña);
@@ -248,5 +263,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton OpCancelar;
         private System.Windows.Forms.ToolStripButton OpGuardar;
+        private System.Windows.Forms.Button button1;
     }
 }

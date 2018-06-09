@@ -54,7 +54,7 @@
             this.OpGuardar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(568, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(789, 25);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -123,10 +123,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 262);
+            this.ClientSize = new System.Drawing.Size(789, 494);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmCaja";
             this.Text = "Caja";
+            this.Load += new System.EventHandler(this.frmCaja_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

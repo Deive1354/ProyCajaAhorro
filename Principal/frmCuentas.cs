@@ -61,9 +61,7 @@ namespace Principal
         }
 
         private void OpAgregar_Click(object sender, EventArgs e)
-        {
-            
-
+        {            
             foreach (Control x in this.Controls)
             {
                 x.Visible = true;
@@ -72,6 +70,8 @@ namespace Principal
                     x.Text = "";
                 }        
             }
+
+
             OpSalir.Enabled = !false;
             OpAgregar.Enabled = false;
             OpModificar.Enabled = false;
@@ -156,6 +156,16 @@ namespace Principal
         }
 
         private void OpEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpGuardar_Click_1(object sender, EventArgs e)
+        {
+            //var IR=new dbCAJA().spCuentas_Apertura()
+        }
+
+        private void OpCancelar_Click_1(object sender, EventArgs e)
         {
 
         }

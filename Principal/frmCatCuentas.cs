@@ -17,13 +17,14 @@ namespace Principal
 
         enum Accion { Agregando, Modificando, Eliminando, Nada };
         Accion acc = Accion.Nada;
+        int NoUsuario = 0;
 
-
-        public frmCatCuentas(ref ToolStripButton BotonMDI)
+        public frmCatCuentas(ref ToolStripButton BotonMDI, int NoUsuarioMDI)
         {
             InitializeComponent();
             _BotonLocal = BotonMDI;
             _BotonLocal.Enabled = false;
+            this.NoUsuario = NoUsuarioMDI;
         }
 
         private void CatCuentas_Load(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace Principal
 
 
             Carga_Grid();
-
+            
         }
 
 
@@ -75,6 +76,8 @@ namespace Principal
                 }
             }
 
+           
+
             OpAgregar.Enabled = false;
             OpModificar.Enabled = false;
             OpEliminar.Enabled = false;
@@ -100,16 +103,14 @@ namespace Principal
                 var reg = new CatCuentas();
 
                 reg.TipoCuenta = this.txtTipoCuenta.Text;
-               // reg.MontoMinimo = this.txtMontoMinimo;
-              //  reg.TasaInteres = this.txtTasaInteres.Text;
-              //  reg.PlazoForsozo = this.txtPlazoForsozo.Text;
+                reg.MontoMinimo =Convert.ToDecimal(this.txtMontoMinimo.Text);
+                reg.TasaInteres =Convert.ToDecimal( this.txtTasaInteres.Text);               
+                reg.PlazoForsozo = Convert.ToInt32(this.txtPlazoForsozo.Text);
                 reg.Activo = true;
-                reg.NoUsuario = 1;
+                reg.NoUsuario = this.NoUsuario;
 
                 _db.CatCuentas.InsertOnSubmit(reg);
                 _db.SubmitChanges();
-
-
             }
 
             CancelaAccion();
@@ -123,7 +124,7 @@ namespace Principal
             CancelaAccion();
         }
 
-              private void CancelaAccion()
+         private void CancelaAccion()
         {
             foreach (Control x in this.Controls)
             {
@@ -136,9 +137,6 @@ namespace Principal
 
                 if (x.GetType().Name == "Label") x.Visible = false;
                 if (x.GetType().Name == "CheckBox") x.Visible = false;
-
-
-
             }
 
             OpAgregar.Enabled = !false;

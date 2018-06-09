@@ -33,9 +33,6 @@ namespace Principal
     partial void InsertCaja(Caja instance);
     partial void UpdateCaja(Caja instance);
     partial void DeleteCaja(Caja instance);
-    partial void InsertCatCuentas(CatCuentas instance);
-    partial void UpdateCatCuentas(CatCuentas instance);
-    partial void DeleteCatCuentas(CatCuentas instance);
     partial void InsertCuentas(Cuentas instance);
     partial void UpdateCuentas(Cuentas instance);
     partial void DeleteCuentas(Cuentas instance);
@@ -45,6 +42,9 @@ namespace Principal
     partial void InsertUsuarios(Usuarios instance);
     partial void UpdateUsuarios(Usuarios instance);
     partial void DeleteUsuarios(Usuarios instance);
+    partial void InsertCatCuentas(CatCuentas instance);
+    partial void UpdateCatCuentas(CatCuentas instance);
+    partial void DeleteCatCuentas(CatCuentas instance);
     #endregion
 		
 		public dbCAJA() : 
@@ -85,14 +85,6 @@ namespace Principal
 			}
 		}
 		
-		public System.Data.Linq.Table<CatCuentas> CatCuentas
-		{
-			get
-			{
-				return this.GetTable<CatCuentas>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Cuentas> Cuentas
 		{
 			get
@@ -122,6 +114,14 @@ namespace Principal
 			get
 			{
 				return this.GetTable<SociosV>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CatCuentas> CatCuentas
+		{
+			get
+			{
+				return this.GetTable<CatCuentas>();
 			}
 		}
 		
@@ -445,240 +445,6 @@ namespace Principal
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="Soft1.CatCuentas")]
-	public partial class CatCuentas : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IdCta;
-		
-		private string _TipoCuenta;
-		
-		private decimal _MontoMinimo;
-		
-		private decimal _TasaInteres;
-		
-		private byte _PlazoForsozo;
-		
-		private int _NoUsuario;
-		
-		private bool _Activo;
-		
-		private EntitySet<Cuentas> _Cuentas;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdCtaChanging(int value);
-    partial void OnIdCtaChanged();
-    partial void OnTipoCuentaChanging(string value);
-    partial void OnTipoCuentaChanged();
-    partial void OnMontoMinimoChanging(decimal value);
-    partial void OnMontoMinimoChanged();
-    partial void OnTasaInteresChanging(decimal value);
-    partial void OnTasaInteresChanged();
-    partial void OnPlazoForsozoChanging(byte value);
-    partial void OnPlazoForsozoChanged();
-    partial void OnNoUsuarioChanging(int value);
-    partial void OnNoUsuarioChanged();
-    partial void OnActivoChanging(bool value);
-    partial void OnActivoChanged();
-    #endregion
-		
-		public CatCuentas()
-		{
-			this._Cuentas = new EntitySet<Cuentas>(new Action<Cuentas>(this.attach_Cuentas), new Action<Cuentas>(this.detach_Cuentas));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCta", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IdCta
-		{
-			get
-			{
-				return this._IdCta;
-			}
-			set
-			{
-				if ((this._IdCta != value))
-				{
-					this.OnIdCtaChanging(value);
-					this.SendPropertyChanging();
-					this._IdCta = value;
-					this.SendPropertyChanged("IdCta");
-					this.OnIdCtaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TipoCuenta", DbType="VarChar(80) NOT NULL", CanBeNull=false)]
-		public string TipoCuenta
-		{
-			get
-			{
-				return this._TipoCuenta;
-			}
-			set
-			{
-				if ((this._TipoCuenta != value))
-				{
-					this.OnTipoCuentaChanging(value);
-					this.SendPropertyChanging();
-					this._TipoCuenta = value;
-					this.SendPropertyChanged("TipoCuenta");
-					this.OnTipoCuentaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoMinimo", DbType="Decimal(18,2) NOT NULL")]
-		public decimal MontoMinimo
-		{
-			get
-			{
-				return this._MontoMinimo;
-			}
-			set
-			{
-				if ((this._MontoMinimo != value))
-				{
-					this.OnMontoMinimoChanging(value);
-					this.SendPropertyChanging();
-					this._MontoMinimo = value;
-					this.SendPropertyChanged("MontoMinimo");
-					this.OnMontoMinimoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TasaInteres", DbType="Decimal(18,2) NOT NULL")]
-		public decimal TasaInteres
-		{
-			get
-			{
-				return this._TasaInteres;
-			}
-			set
-			{
-				if ((this._TasaInteres != value))
-				{
-					this.OnTasaInteresChanging(value);
-					this.SendPropertyChanging();
-					this._TasaInteres = value;
-					this.SendPropertyChanged("TasaInteres");
-					this.OnTasaInteresChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PlazoForsozo", DbType="TinyInt NOT NULL")]
-		public byte PlazoForsozo
-		{
-			get
-			{
-				return this._PlazoForsozo;
-			}
-			set
-			{
-				if ((this._PlazoForsozo != value))
-				{
-					this.OnPlazoForsozoChanging(value);
-					this.SendPropertyChanging();
-					this._PlazoForsozo = value;
-					this.SendPropertyChanged("PlazoForsozo");
-					this.OnPlazoForsozoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NoUsuario", DbType="Int NOT NULL")]
-		public int NoUsuario
-		{
-			get
-			{
-				return this._NoUsuario;
-			}
-			set
-			{
-				if ((this._NoUsuario != value))
-				{
-					this.OnNoUsuarioChanging(value);
-					this.SendPropertyChanging();
-					this._NoUsuario = value;
-					this.SendPropertyChanged("NoUsuario");
-					this.OnNoUsuarioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Activo", DbType="Bit NOT NULL")]
-		public bool Activo
-		{
-			get
-			{
-				return this._Activo;
-			}
-			set
-			{
-				if ((this._Activo != value))
-				{
-					this.OnActivoChanging(value);
-					this.SendPropertyChanging();
-					this._Activo = value;
-					this.SendPropertyChanged("Activo");
-					this.OnActivoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatCuentas_Cuentas", Storage="_Cuentas", ThisKey="IdCta", OtherKey="Idcta")]
-		public EntitySet<Cuentas> Cuentas
-		{
-			get
-			{
-				return this._Cuentas;
-			}
-			set
-			{
-				this._Cuentas.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Cuentas(Cuentas entity)
-		{
-			this.SendPropertyChanging();
-			entity.CatCuentas = this;
-		}
-		
-		private void detach_Cuentas(Cuentas entity)
-		{
-			this.SendPropertyChanging();
-			entity.CatCuentas = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="Soft1.Cuentas")]
 	public partial class Cuentas : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -705,11 +471,11 @@ namespace Principal
 		
 		private EntitySet<Caja> _Caja;
 		
-		private EntityRef<CatCuentas> _CatCuentas;
-		
 		private EntityRef<SOCIOS> _SOCIOS;
 		
 		private EntityRef<Usuarios> _Usuarios;
+		
+		private EntityRef<CatCuentas> _CatCuentas;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -738,9 +504,9 @@ namespace Principal
 		public Cuentas()
 		{
 			this._Caja = new EntitySet<Caja>(new Action<Caja>(this.attach_Caja), new Action<Caja>(this.detach_Caja));
-			this._CatCuentas = default(EntityRef<CatCuentas>);
 			this._SOCIOS = default(EntityRef<SOCIOS>);
 			this._Usuarios = default(EntityRef<Usuarios>);
+			this._CatCuentas = default(EntityRef<CatCuentas>);
 			OnCreated();
 		}
 		
@@ -949,40 +715,6 @@ namespace Principal
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatCuentas_Cuentas", Storage="_CatCuentas", ThisKey="Idcta", OtherKey="IdCta", IsForeignKey=true)]
-		public CatCuentas CatCuentas
-		{
-			get
-			{
-				return this._CatCuentas.Entity;
-			}
-			set
-			{
-				CatCuentas previousValue = this._CatCuentas.Entity;
-				if (((previousValue != value) 
-							|| (this._CatCuentas.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._CatCuentas.Entity = null;
-						previousValue.Cuentas.Remove(this);
-					}
-					this._CatCuentas.Entity = value;
-					if ((value != null))
-					{
-						value.Cuentas.Add(this);
-						this._Idcta = value.IdCta;
-					}
-					else
-					{
-						this._Idcta = default(int);
-					}
-					this.SendPropertyChanged("CatCuentas");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SOCIOS_Cuentas", Storage="_SOCIOS", ThisKey="Idsocio", OtherKey="IdSocio", IsForeignKey=true)]
 		public SOCIOS SOCIOS
 		{
@@ -1047,6 +779,40 @@ namespace Principal
 						this._NoUsuario = default(int);
 					}
 					this.SendPropertyChanged("Usuarios");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatCuentas_Cuentas", Storage="_CatCuentas", ThisKey="Idcta", OtherKey="IdCta", IsForeignKey=true)]
+		public CatCuentas CatCuentas
+		{
+			get
+			{
+				return this._CatCuentas.Entity;
+			}
+			set
+			{
+				CatCuentas previousValue = this._CatCuentas.Entity;
+				if (((previousValue != value) 
+							|| (this._CatCuentas.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CatCuentas.Entity = null;
+						previousValue.Cuentas.Remove(this);
+					}
+					this._CatCuentas.Entity = value;
+					if ((value != null))
+					{
+						value.Cuentas.Add(this);
+						this._Idcta = value.IdCta;
+					}
+					else
+					{
+						this._Idcta = default(int);
+					}
+					this.SendPropertyChanged("CatCuentas");
 				}
 			}
 		}
@@ -1397,7 +1163,7 @@ namespace Principal
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(32) NOT NULL", CanBeNull=false)]
 		public string Contraseña
 		{
 			get
@@ -1658,6 +1424,240 @@ namespace Principal
 					this._Usuario = value;
 				}
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="Soft1.CatCuentas")]
+	public partial class CatCuentas : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IdCta;
+		
+		private string _TipoCuenta;
+		
+		private decimal _MontoMinimo;
+		
+		private decimal _TasaInteres;
+		
+		private int _PlazoForsozo;
+		
+		private int _NoUsuario;
+		
+		private bool _Activo;
+		
+		private EntitySet<Cuentas> _Cuentas;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdCtaChanging(int value);
+    partial void OnIdCtaChanged();
+    partial void OnTipoCuentaChanging(string value);
+    partial void OnTipoCuentaChanged();
+    partial void OnMontoMinimoChanging(decimal value);
+    partial void OnMontoMinimoChanged();
+    partial void OnTasaInteresChanging(decimal value);
+    partial void OnTasaInteresChanged();
+    partial void OnPlazoForsozoChanging(int value);
+    partial void OnPlazoForsozoChanged();
+    partial void OnNoUsuarioChanging(int value);
+    partial void OnNoUsuarioChanged();
+    partial void OnActivoChanging(bool value);
+    partial void OnActivoChanged();
+    #endregion
+		
+		public CatCuentas()
+		{
+			this._Cuentas = new EntitySet<Cuentas>(new Action<Cuentas>(this.attach_Cuentas), new Action<Cuentas>(this.detach_Cuentas));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCta", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IdCta
+		{
+			get
+			{
+				return this._IdCta;
+			}
+			set
+			{
+				if ((this._IdCta != value))
+				{
+					this.OnIdCtaChanging(value);
+					this.SendPropertyChanging();
+					this._IdCta = value;
+					this.SendPropertyChanged("IdCta");
+					this.OnIdCtaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TipoCuenta", DbType="VarChar(80) NOT NULL", CanBeNull=false)]
+		public string TipoCuenta
+		{
+			get
+			{
+				return this._TipoCuenta;
+			}
+			set
+			{
+				if ((this._TipoCuenta != value))
+				{
+					this.OnTipoCuentaChanging(value);
+					this.SendPropertyChanging();
+					this._TipoCuenta = value;
+					this.SendPropertyChanged("TipoCuenta");
+					this.OnTipoCuentaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoMinimo", DbType="Decimal(18,2) NOT NULL")]
+		public decimal MontoMinimo
+		{
+			get
+			{
+				return this._MontoMinimo;
+			}
+			set
+			{
+				if ((this._MontoMinimo != value))
+				{
+					this.OnMontoMinimoChanging(value);
+					this.SendPropertyChanging();
+					this._MontoMinimo = value;
+					this.SendPropertyChanged("MontoMinimo");
+					this.OnMontoMinimoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TasaInteres", DbType="Decimal(18,2) NOT NULL")]
+		public decimal TasaInteres
+		{
+			get
+			{
+				return this._TasaInteres;
+			}
+			set
+			{
+				if ((this._TasaInteres != value))
+				{
+					this.OnTasaInteresChanging(value);
+					this.SendPropertyChanging();
+					this._TasaInteres = value;
+					this.SendPropertyChanged("TasaInteres");
+					this.OnTasaInteresChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PlazoForsozo", DbType="Int NOT NULL")]
+		public int PlazoForsozo
+		{
+			get
+			{
+				return this._PlazoForsozo;
+			}
+			set
+			{
+				if ((this._PlazoForsozo != value))
+				{
+					this.OnPlazoForsozoChanging(value);
+					this.SendPropertyChanging();
+					this._PlazoForsozo = value;
+					this.SendPropertyChanged("PlazoForsozo");
+					this.OnPlazoForsozoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NoUsuario", DbType="Int NOT NULL")]
+		public int NoUsuario
+		{
+			get
+			{
+				return this._NoUsuario;
+			}
+			set
+			{
+				if ((this._NoUsuario != value))
+				{
+					this.OnNoUsuarioChanging(value);
+					this.SendPropertyChanging();
+					this._NoUsuario = value;
+					this.SendPropertyChanged("NoUsuario");
+					this.OnNoUsuarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Activo", DbType="Bit NOT NULL")]
+		public bool Activo
+		{
+			get
+			{
+				return this._Activo;
+			}
+			set
+			{
+				if ((this._Activo != value))
+				{
+					this.OnActivoChanging(value);
+					this.SendPropertyChanging();
+					this._Activo = value;
+					this.SendPropertyChanged("Activo");
+					this.OnActivoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CatCuentas_Cuentas", Storage="_Cuentas", ThisKey="IdCta", OtherKey="Idcta")]
+		public EntitySet<Cuentas> Cuentas
+		{
+			get
+			{
+				return this._Cuentas;
+			}
+			set
+			{
+				this._Cuentas.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Cuentas(Cuentas entity)
+		{
+			this.SendPropertyChanging();
+			entity.CatCuentas = this;
+		}
+		
+		private void detach_Cuentas(Cuentas entity)
+		{
+			this.SendPropertyChanging();
+			entity.CatCuentas = null;
 		}
 	}
 	

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace Principal
 {
@@ -17,6 +18,22 @@ namespace Principal
 
         enum Accion { Agregando, Modificando, Eliminando, Nada };
         Accion acc = Accion.Nada;
+
+
+        public static string ObtieneEncriptacion(string cadena)
+        {
+            var md5Hasher = MD5.Create();
+
+            byte[] data = md5Hasher.ComputeHash(Encoding.Default.GetBytes(cadena));
+
+            var sBuilder = new StringBuilder();
+
+            for (Int16 i = 0; i <= data.Length - 1; i++)
+            {
+                sBuilder.Append(data[i].ToString("X2"));
+            }
+            return sBuilder.ToString();
+        }
 
 
 
@@ -154,6 +171,23 @@ namespace Principal
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtcontraseña.Text = ObtieneEncriptacion("0");
+            //MessageBox.Show(txtcontraseña.TextLength.ToString());
+
+        }
+
+        private void OpSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void OpGuardar_Click_1(object sender, EventArgs e)
         {
 
         }
