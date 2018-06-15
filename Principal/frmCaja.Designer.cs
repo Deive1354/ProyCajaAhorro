@@ -72,11 +72,7 @@
             this.OpGuardar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-<<<<<<< HEAD
-            this.toolStrip1.Size = new System.Drawing.Size(789, 25);
-=======
-            this.toolStrip1.Size = new System.Drawing.Size(852, 25);
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
+            this.toolStrip1.Size = new System.Drawing.Size(986, 25);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -149,7 +145,7 @@
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(83, 192);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(591, 150);
+            this.dataGridView4.Size = new System.Drawing.Size(853, 192);
             this.dataGridView4.TabIndex = 6;
             // 
             // mvto
@@ -160,6 +156,7 @@
             this.mvto.Size = new System.Drawing.Size(51, 13);
             this.mvto.TabIndex = 7;
             this.mvto.Text = "No Mvto:";
+            this.mvto.Visible = false;
             // 
             // NoMvto
             // 
@@ -167,6 +164,7 @@
             this.NoMvto.Name = "NoMvto";
             this.NoMvto.Size = new System.Drawing.Size(100, 20);
             this.NoMvto.TabIndex = 8;
+            this.NoMvto.Visible = false;
             // 
             // NoCu
             // 
@@ -174,6 +172,7 @@
             this.NoCu.Name = "NoCu";
             this.NoCu.Size = new System.Drawing.Size(100, 20);
             this.NoCu.TabIndex = 10;
+            this.NoCu.Visible = false;
             // 
             // cuenta
             // 
@@ -183,6 +182,7 @@
             this.cuenta.Size = new System.Drawing.Size(61, 13);
             this.cuenta.TabIndex = 9;
             this.cuenta.Text = "No Cuenta:";
+            this.cuenta.Visible = false;
             // 
             // NoUsuario
             // 
@@ -190,6 +190,7 @@
             this.NoUsuario.Name = "NoUsuario";
             this.NoUsuario.Size = new System.Drawing.Size(100, 20);
             this.NoUsuario.TabIndex = 12;
+            this.NoUsuario.Visible = false;
             // 
             // Nusuario
             // 
@@ -199,6 +200,7 @@
             this.Nusuario.Size = new System.Drawing.Size(63, 13);
             this.Nusuario.TabIndex = 11;
             this.Nusuario.Text = "No Usuario:";
+            this.Nusuario.Visible = false;
             // 
             // SaldoInicial
             // 
@@ -206,6 +208,7 @@
             this.SaldoInicial.Name = "SaldoInicial";
             this.SaldoInicial.Size = new System.Drawing.Size(100, 20);
             this.SaldoInicial.TabIndex = 14;
+            this.SaldoInicial.Visible = false;
             this.SaldoInicial.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // SIni
@@ -216,6 +219,7 @@
             this.SIni.Size = new System.Drawing.Size(67, 13);
             this.SIni.TabIndex = 13;
             this.SIni.Text = "Saldo Inicial:";
+            this.SIni.Visible = false;
             this.SIni.Click += new System.EventHandler(this.label1_Click);
             // 
             // Deposito
@@ -224,6 +228,7 @@
             this.Deposito.Name = "Deposito";
             this.Deposito.Size = new System.Drawing.Size(100, 20);
             this.Deposito.TabIndex = 16;
+            this.Deposito.Visible = false;
             // 
             // dep
             // 
@@ -233,6 +238,7 @@
             this.dep.Size = new System.Drawing.Size(52, 13);
             this.dep.TabIndex = 15;
             this.dep.Text = "Deposito:";
+            this.dep.Visible = false;
             // 
             // Retiro
             // 
@@ -240,6 +246,7 @@
             this.Retiro.Name = "Retiro";
             this.Retiro.Size = new System.Drawing.Size(100, 20);
             this.Retiro.TabIndex = 18;
+            this.Retiro.Visible = false;
             // 
             // Ret
             // 
@@ -249,6 +256,7 @@
             this.Ret.Size = new System.Drawing.Size(38, 13);
             this.Ret.TabIndex = 17;
             this.Ret.Text = "Retiro:";
+            this.Ret.Visible = false;
             // 
             // SaldFin
             // 
@@ -256,6 +264,7 @@
             this.SaldFin.Name = "SaldFin";
             this.SaldFin.Size = new System.Drawing.Size(100, 20);
             this.SaldFin.TabIndex = 20;
+            this.SaldFin.Visible = false;
             // 
             // label1
             // 
@@ -265,6 +274,7 @@
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 19;
             this.label1.Text = "Saldo Final:";
+            this.label1.Visible = false;
             // 
             // dateTimePicker1
             // 
@@ -272,6 +282,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(213, 20);
             this.dateTimePicker1.TabIndex = 21;
+            this.dateTimePicker1.Visible = false;
             // 
             // fecha
             // 
@@ -281,15 +292,13 @@
             this.fecha.Size = new System.Drawing.Size(82, 13);
             this.fecha.TabIndex = 22;
             this.fecha.Text = "Fecha de Mvto:";
+            this.fecha.Visible = false;
             // 
             // frmCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(789, 494);
-=======
-            this.ClientSize = new System.Drawing.Size(852, 396);
+            this.ClientSize = new System.Drawing.Size(986, 396);
             this.Controls.Add(this.fecha);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.SaldFin);
@@ -307,7 +316,6 @@
             this.Controls.Add(this.NoMvto);
             this.Controls.Add(this.mvto);
             this.Controls.Add(this.dataGridView4);
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmCaja";
             this.Text = "Caja";

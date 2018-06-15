@@ -175,7 +175,7 @@ namespace Principal
 
         }
 
-<<<<<<< HEAD
+
         private void button1_Click(object sender, EventArgs e)
         {
             txtcontraseña.Text = ObtieneEncriptacion("0");
@@ -183,19 +183,22 @@ namespace Principal
 
         }
 
-=======
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
+
         private void OpSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-<<<<<<< HEAD
+
 
         private void OpGuardar_Click_1(object sender, EventArgs e)
         {
 
         }
-=======
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

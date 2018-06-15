@@ -29,14 +29,9 @@ namespace Principal
         }
 
          private void Caja_Load(object sender, EventArgs e)
-         {
-             this._BotonLocal.Enabled = false;
-
-
-             Carga_Grid();
-
+         { 
          }
-
+       
 
 
 
@@ -45,6 +40,7 @@ namespace Principal
              var lista = from x in new dbCAJA().Caja
                          select x;
              this.dataGridView4.DataSource = lista.ToList();
+
          }
 
 
@@ -60,10 +56,16 @@ namespace Principal
 
         private void frmCaja_Load(object sender, EventArgs e)
         {
+             this._BotonLocal.Enabled = false;
+
+
+             Carga_Grid();
+
+         
+
 
         }
-<<<<<<< HEAD
-=======
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -101,7 +103,8 @@ namespace Principal
             {
                 MessageBox.Show("LLene los campos vacios ");
                 return;
-            }
+            }                                 
+
 
 
             if (acc == Accion.Agregando)
@@ -109,8 +112,12 @@ namespace Principal
 
                 var _db = new dbCAJA();
                 var cs = new Caja();
-                var nc = NoCu.Text;
+
                 cs.FechaMvto = this.dateTimePicker1.Value;
+                cs.SaldoInicial = Convert.ToInt32(this.SaldoInicial.Text);
+                cs.SaldoFinal = Convert.ToInt32(this.SaldFin.Text);
+                cs.Retiro = Convert.ToInt32(this.Retiro.Text);
+                cs.Deposito = Convert.ToInt32(this.dep.Text);
                
                 _db.Caja.InsertOnSubmit(cs);
                 _db.SubmitChanges();
@@ -156,5 +163,5 @@ namespace Principal
         }
 
         }
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
+
     }
