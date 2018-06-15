@@ -62,8 +62,7 @@ namespace Principal
         {
 
         }
-<<<<<<< HEAD
-=======
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -156,5 +155,5 @@ namespace Principal
         }
 
         }
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
+
     }

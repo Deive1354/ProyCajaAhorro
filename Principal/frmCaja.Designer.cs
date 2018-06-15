@@ -72,11 +72,11 @@
             this.OpGuardar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-<<<<<<< HEAD
+
             this.toolStrip1.Size = new System.Drawing.Size(789, 25);
-=======
+
             this.toolStrip1.Size = new System.Drawing.Size(852, 25);
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
+
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -286,9 +286,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+
             this.ClientSize = new System.Drawing.Size(789, 494);
-=======
+
             this.ClientSize = new System.Drawing.Size(852, 396);
             this.Controls.Add(this.fecha);
             this.Controls.Add(this.dateTimePicker1);
@@ -307,7 +307,7 @@
             this.Controls.Add(this.NoMvto);
             this.Controls.Add(this.mvto);
             this.Controls.Add(this.dataGridView4);
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
+
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmCaja";
             this.Text = "Caja";

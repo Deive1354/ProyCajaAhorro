@@ -165,6 +165,7 @@
             this.OpAgregar.Name = "OpAgregar";
             this.OpAgregar.Size = new System.Drawing.Size(69, 22);
             this.OpAgregar.Text = "Agregar";
+            this.OpAgregar.Click += new System.EventHandler(this.OpAgregar_Click_1);
             // 
             // OpModificar
             // 
@@ -173,6 +174,7 @@
             this.OpModificar.Name = "OpModificar";
             this.OpModificar.Size = new System.Drawing.Size(78, 22);
             this.OpModificar.Text = "Modificar";
+            this.OpModificar.Click += new System.EventHandler(this.OpModificar_Click_1);
             // 
             // OpEliminar
             // 
@@ -195,6 +197,7 @@
             this.OpCancelar.Name = "OpCancelar";
             this.OpCancelar.Size = new System.Drawing.Size(73, 22);
             this.OpCancelar.Text = "Cancelar";
+            this.OpCancelar.Click += new System.EventHandler(this.OpCancelar_Click_1);
             // 
             // OpGuardar
             // 
@@ -234,6 +237,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "FrmUsuarios";
             this.Text = "FrmUsuarios";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUsuarios_FormClosing);
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);

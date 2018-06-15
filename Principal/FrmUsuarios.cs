@@ -175,7 +175,7 @@ namespace Principal
 
         }
 
-<<<<<<< HEAD
+
         private void button1_Click(object sender, EventArgs e)
         {
             txtcontraseña.Text = ObtieneEncriptacion("0");
@@ -183,19 +183,81 @@ namespace Principal
 
         }
 
-=======
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
+
         private void OpSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-<<<<<<< HEAD
+
+
+
 
         private void OpGuardar_Click_1(object sender, EventArgs e)
         {
+            if (txtnodeusuario.Text == "" || txtcontraseña.Text == "" || txtusuarios.Text == "")
+            {
+                MessageBox.Show("campos vacios revise su captura");
+                return;
+            }
+
+
+
+            if (acc == Accion.Agregando)
+            {
+
+                var _db = new dbCAJA();
+                var reg = new Usuarios ();
+
+                reg.Usuario = this.txtusuarios.Text;
+                reg.Contraseña = this.txtcontraseña.Text;
+                reg.NoUsuario = Convert.ToInt32(this.txtnodeusuario.Text);
+                reg.Activo = true;
+
+
+                _db.Usuarios.InsertOnSubmit(reg);
+                _db.SubmitChanges();
+
+
+            }
+
+
+            CancelaAccion();
+            Carga_Grid();
+        }
+
+        private void FrmUsuarios_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this._BotonLocal.Enabled = true;
+        }
+
+        private void OpAgregar_Click_1(object sender, EventArgs e)
+        {
+            foreach (Control x in this.Controls)
+            {
+                x.Visible = true;
+                if (x.GetType().Name == "TextBox")
+                {
+                    x.Text = "";
+                }
+            }
+
+            OpAgregar.Enabled = false;
+            OpModificar.Enabled = false;
+            OpEliminar.Enabled = false;
+            OpCancelar.Enabled = true;
+            OpGuardar.Enabled = true;
+            acc = Accion.Agregando;
+        }
+
+        private void OpCancelar_Click_1(object sender, EventArgs e)
+        {
+            CancelaAccion();
+        }
+
+       
+        private void OpModificar_Click_1(object sender, EventArgs e)
+        {
 
         }
-=======
->>>>>>> 3a4c45d2748e62c6b5d305ea6420203d15c58285
     }
 }
